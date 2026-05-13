@@ -1,0 +1,9 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed May 13 15:22:34 ICT 2026
+@default-github-jda-https\://maven.pkg.github.com/jdomainapp/jda/.lastUpdated=1778660554531
+file\://local-maven-repo/.error=
+file\://local-maven-repo/.lastUpdated=1778660552819
+https\://maven.pkg.github.com/jdomainapp/jda/.error=Could not transfer artifact org.mdkt.compiler\:InMemoryJavaCompiler\:pom\:1.3.0 from/to github-jda (https\://maven.pkg.github.com/jdomainapp/jda)\: status code\: 401, reason phrase\: Unauthorized (401)
+https\://repo.eclipse.org/content/groups/releases/.error=
+https\://repo.eclipse.org/content/groups/releases/.lastUpdated=1778660554200
+https\://repo.maven.apache.org/maven2/.lastUpdated=1778660554663

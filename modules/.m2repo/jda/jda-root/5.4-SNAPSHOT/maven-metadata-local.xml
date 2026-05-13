@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>jda</groupId>
+  <artifactId>jda-root</artifactId>
+  <versioning>
+    <lastUpdated>20260513090337</lastUpdated>
+    <snapshot>
+      <localCopy>true</localCopy>
+    </snapshot>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>5.4-SNAPSHOT</value>
+        <updated>20260513090337</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+  <version>5.4-SNAPSHOT</version>
+</metadata>
