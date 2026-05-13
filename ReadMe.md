@@ -33,7 +33,7 @@ The content of Jdomainapp folder needs to look like this:
 # How to run the tool in a Java software framework
 The tool can be executed within an Integrated evelopment Environment (IDE), such as Eclipse; PostgreSQL Database
 1. Use the "Import existing Maven project" to import the artifact project
-2. PostgreSQL:
+2. MySQL:
    - Create User: admin; Pass: password
    - Create a database name: domainds
 ## running a pattern form: Decisional, forked, joined, merged, sequential (in jda\modules\mbsl\src\test\java\org\jda\example\courseman\software):
