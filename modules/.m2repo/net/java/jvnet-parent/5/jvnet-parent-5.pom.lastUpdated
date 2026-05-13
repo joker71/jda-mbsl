@@ -1,0 +1,9 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed May 13 16:03:54 ICT 2026
+file\://local-maven-repo/.error=
+file\://local-maven-repo/.lastUpdated=1778663033973
+https\://maven.pkg.github.com/jdomainapp/jda/.error=
+https\://maven.pkg.github.com/jdomainapp/jda/.lastUpdated=1778663034639
+https\://repo.eclipse.org/content/groups/releases/.error=
+https\://repo.eclipse.org/content/groups/releases/.lastUpdated=1778663034269
+https\://repo.maven.apache.org/maven2/.lastUpdated=1778663034739

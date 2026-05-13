@@ -12,7 +12,7 @@ import org.jda.example.courseman.modules.student.ModuleStudent;
 
 import jda.modules.dodm.dom.DOM;
 import jda.modules.dodm.dsm.DSM;
-import jda.modules.dodm.osm.postgresql.PostgreSQLOSM;
+import jda.modules.dodm.osm.mysql.MySQLOSM;
 import jda.modules.jdatool.DomainAppTool;
 import jda.modules.mccl.conceptmodel.Configuration.Language;
 import jda.modules.mccl.conceptmodel.dodm.OsmConfig.ConnectionType;
@@ -41,13 +41,13 @@ import jda.modules.setup.model.SetUpConfig;
         url="http://fit.hanu.edu.vn"
     ), 
     dsDesc=@DSDesc(
-        type="postgresql", 
-        dsUrl="//localhost:5432/domainds", 
+        type="mysql",
+        dsUrl="//localhost:3306/domainds",
         user="admin",
         password="password",
         dsmType=DSM.class,
         domType=DOM.class,
-        osmType=PostgreSQLOSM.class,
+        osmType=MySQLOSM.class,
         connType=ConnectionType.Client
     ), 
     modules={         

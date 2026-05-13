@@ -1,0 +1,9 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed May 13 16:25:30 ICT 2026
+4f7098dcfb4c2b1e509f5bccb54fb597d14d9daa@default-github-jda-https\://maven.pkg.github.com/jdomainapp/jda/.lastUpdated=1778664329401
+file\://local-maven-repo/.error=
+file\://local-maven-repo/.lastUpdated=1778664327340
+https\://maven.pkg.github.com/jdomainapp/jda/.error=Could not transfer artifact com.mysql\:mysql-connector-j\:jar\:9.7.0 from/to github-jda (https\://maven.pkg.github.com/jdomainapp/jda)\: status code\: 401, reason phrase\: Unauthorized (401)
+https\://repo.eclipse.org/content/groups/releases/.error=
+https\://repo.eclipse.org/content/groups/releases/.lastUpdated=1778664327990
+https\://repo.maven.apache.org/maven2/.lastUpdated=1778664330042

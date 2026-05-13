@@ -1,0 +1,9 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed May 13 16:25:25 ICT 2026
+4f7098dcfb4c2b1e509f5bccb54fb597d14d9daa@default-github-jda-https\://maven.pkg.github.com/jdomainapp/jda/.lastUpdated=1778664325093
+file\://local-maven-repo/.error=
+file\://local-maven-repo/.lastUpdated=1778664324168
+https\://maven.pkg.github.com/jdomainapp/jda/.error=Could not transfer artifact com.google.protobuf\:protobuf-java\:pom\:4.31.1 from/to github-jda (https\://maven.pkg.github.com/jdomainapp/jda)\: status code\: 401, reason phrase\: Unauthorized (401)
+https\://repo.eclipse.org/content/groups/releases/.error=
+https\://repo.eclipse.org/content/groups/releases/.lastUpdated=1778664324468
+https\://repo.maven.apache.org/maven2/.lastUpdated=1778664325185

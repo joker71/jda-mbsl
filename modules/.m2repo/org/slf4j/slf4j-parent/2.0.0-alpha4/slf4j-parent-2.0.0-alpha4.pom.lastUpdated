@@ -1,0 +1,9 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed May 13 15:22:48 ICT 2026
+@default-github-jda-https\://maven.pkg.github.com/jdomainapp/jda/.lastUpdated=1778660568171
+file\://local-maven-repo/.error=
+file\://local-maven-repo/.lastUpdated=1778660567578
+https\://maven.pkg.github.com/jdomainapp/jda/.error=Could not transfer artifact org.slf4j\:slf4j-parent\:pom\:2.0.0-alpha4 from/to github-jda (https\://maven.pkg.github.com/jdomainapp/jda)\: status code\: 401, reason phrase\: Unauthorized (401)
+https\://repo.eclipse.org/content/groups/releases/.error=
+https\://repo.eclipse.org/content/groups/releases/.lastUpdated=1778660567885
+https\://repo.maven.apache.org/maven2/.lastUpdated=1778660568264

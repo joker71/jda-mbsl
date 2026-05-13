@@ -1,0 +1,10 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed May 13 15:59:29 ICT 2026
+756f449b285ecf9883836b201d2f78de407a269d@default-github-jda-https\://maven.pkg.github.com/jdomainapp/jda/.lastUpdated=1778662769800
+98ec33cf6bca8ec2bbae3b61701a56b4e98195b8@default-github-jda-https\://maven.pkg.github.com/jdomainapp/jda/.lastUpdated=1778662747467
+@default-github-jda-https\://maven.pkg.github.com/jdomainapp/jda/.lastUpdated=1778660550350
+file\://local-maven-repo/.error=
+file\://local-maven-repo/.lastUpdated=1778660549783
+https\://maven.pkg.github.com/jdomainapp/jda/.error=Could not transfer artifact jda\:jda-common\:pom\:5.4-SNAPSHOT from/to github-jda (https\://maven.pkg.github.com/jdomainapp/jda)\: status code\: 401, reason phrase\: Unauthorized (401)
+https\://repo.eclipse.org/content/groups/releases/.error=
+https\://repo.eclipse.org/content/groups/releases/.lastUpdated=1778660550063
