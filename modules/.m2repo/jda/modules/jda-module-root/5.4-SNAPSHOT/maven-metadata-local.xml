@@ -3,7 +3,7 @@
   <groupId>jda.modules</groupId>
   <artifactId>jda-module-root</artifactId>
   <versioning>
-    <lastUpdated>20260513090337</lastUpdated>
+    <lastUpdated>20260514070242</lastUpdated>
     <snapshot>
       <localCopy>true</localCopy>
     </snapshot>
@@ -11,7 +11,7 @@
       <snapshotVersion>
         <extension>pom</extension>
         <value>5.4-SNAPSHOT</value>
-        <updated>20260513090337</updated>
+        <updated>20260514070242</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>

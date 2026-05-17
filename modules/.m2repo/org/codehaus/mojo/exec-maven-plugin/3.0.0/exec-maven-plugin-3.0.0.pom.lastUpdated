@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu May 14 11:04:27 ICT 2026
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1778731467389
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.codehaus.mojo\:exec-maven-plugin\:pom\:3.0.0 from/to central (https\://repo.maven.apache.org/maven2)\: transfer failed for https\://repo.maven.apache.org/maven2/org/codehaus/mojo/exec-maven-plugin/3.0.0/exec-maven-plugin-3.0.0.pom
