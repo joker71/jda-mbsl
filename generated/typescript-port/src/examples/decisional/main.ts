@@ -1,6 +1,7 @@
 import { ActivityModel } from "../../core/graph";
 import { BasicModuleService } from "../../runtime/basic-module-service";
 import { ActivityDefinition, NodeType, StrategyRegistry } from "../../core/types";
+import { DecisionalMysqlStore } from "./mysql-persistence";
 
 interface Student {
   id: string;
@@ -68,10 +69,14 @@ const strategies: StrategyRegistry = {
 };
 
 async function main(): Promise<void> {
+  const store = DecisionalMysqlStore.fromEnv();
+  await store.init();
+
   const activityService = new BasicModuleService("EnrolmentMgmt");
 
   const studentService = new BasicModuleService("Student").registerAction("newObject", async (args) => {
     const student = args[0] as Student;
+    await store.upsertStudent(student);
     console.log(`[Student.newObject] ${student.name}`);
     return student;
   });
@@ -84,7 +89,8 @@ async function main(): Promise<void> {
     .registerAction("setDataFieldValues", async (args, attribNames) => {
       const student = args[0] as Student;
       const payload: HelpRequest = { studentId: student.id, type: "help-request" };
-      console.log("[HelpRequest.setDataFieldValues]", attribNames, payload);
+      const id = await store.createHelpRequest(payload);
+      console.log("[HelpRequest.setDataFieldValues]", attribNames, { id, ...payload });
       return payload;
     });
 
@@ -99,7 +105,8 @@ async function main(): Promise<void> {
         studentId: student.id,
         type: "sclass-registration"
       };
-      console.log("[SClassRegistration.setDataFieldValues]", attribNames, payload);
+      const id = await store.createSClassRegistration(payload);
+      console.log("[SClassRegistration.setDataFieldValues]", attribNames, { id, ...payload });
       return payload;
     });
 
@@ -112,17 +119,21 @@ async function main(): Promise<void> {
 
   console.log("Initial nodes:", model.getInitNodes());
 
-  await model.exec(activityService, {
-    id: "S2026",
-    name: "Lan",
-    helpRequested: true
-  } satisfies Student);
+  try {
+    await model.exec(activityService, {
+      id: "S2026",
+      name: "Lan",
+      helpRequested: true
+    } satisfies Student);
 
-  await model.exec(activityService, {
-    id: "S2027",
-    name: "Minh",
-    helpRequested: false
-  } satisfies Student);
+    await model.exec(activityService, {
+      id: "S2027",
+      name: "Minh",
+      helpRequested: false
+    } satisfies Student);
+  } finally {
+    await store.close();
+  }
 }
 
 main().catch((error) => {

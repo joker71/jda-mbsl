@@ -5,9 +5,12 @@
   "description": "TypeScript port of the core MBSL activity engine from jda-mbsl",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "start": "node dist/examples/decisional/main.js"
+    "start": "node --env-file=.env dist/examples/decisional/main.js"
   },
   "devDependencies": {
     "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "mysql2": "^3.22.3"
   }
 }
