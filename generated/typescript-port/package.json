@@ -1,0 +1,13 @@
+{
+  "name": "jda-mbsl-typescript-port",
+  "version": "0.1.0",
+  "private": true,
+  "description": "TypeScript port of the core MBSL activity engine from jda-mbsl",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/examples/decisional/main.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
