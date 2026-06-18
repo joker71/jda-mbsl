@@ -1,0 +1,13 @@
+// Sinh ra từ DCSL Model: <%= entity.name %>
+const mongoose = require('mongoose');
+
+const <%= entity.name.toLowerCase() %>Schema = new mongoose.Schema({
+  <% entity.attributes.forEach(attr => { %>
+  <%= attr.name %>: {
+    type: <%= attr.type %>,
+    <% if (attr.default) { %>default: '<%= attr.default %>'<% } %>
+  },
+  <% }) %>
+}, { timestamps: true });
+
+module.exports = mongoose.model('<%= entity.name %>', <%= entity.name.toLowerCase() %>Schema);

@@ -1,0 +1,37 @@
+// Sinh ra từ AGL: Activity Graph cho <%= entity.name %>
+const <%= entity.name %> = require('../models/<%= entity.name %>');
+
+<% activities.forEach(activity => { %>
+exports.<%= activity.name %> = async (req, res) => {
+  try {
+    const { id } = req.params;
+    
+    // Step: open (Atomic Action)
+    let record = await <%= entity.name %>.findById(id);
+    if (!record) return res.status(404).json({ error: 'Not found' });
+
+    <% activity.nodes.forEach(node => { %>
+      <% if (node.step === 'decisional') { %>
+        // Step: Decisional Pattern
+        if (!(<%= node.condition.replace('order', 'record') %>)) {
+           return res.status(400).json({ error: 'Business rule validation failed' });
+        }
+      <% } %>
+      
+      <% if (node.step === 'setDataFieldValues') { %>
+        // Step: setDataFieldValues
+        <% Object.keys(node.fields).forEach(key => { %>
+          record.<%= key %> = '<%= node.fields[key] %>';
+        <% }) %>
+      <% } %>
+    <% }) %>
+
+    // Step: save
+    await record.save();
+    return res.status(200).json(record);
+
+  } catch (error) {
+    return res.status(500).json({ error: error.message });
+  }
+};
+<% }) %>

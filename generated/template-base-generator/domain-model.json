@@ -1,0 +1,33 @@
+{
+  "serviceName": "OrderService",
+  "entities": [
+    {
+      "name": "Order",
+      "attributes": [
+        { "name": "id", "type": "String", "isPrimary": true },
+        { "name": "totalAmount", "type": "Number" },
+        { "name": "status", "type": "String", "default": "PENDING" }
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "name": "approveOrder",
+      "entity": "Order",
+      "nodes": [
+        { "step": "open", "description": "Load Order from DB" },
+        { "step": "decisional", "condition": "order.status === 'PENDING'" },
+        { "step": "setDataFieldValues", "fields": { "status": "APPROVED" } },
+        { "step": "save", "description": "Update Order in DB" }
+      ]
+    }
+  ],
+  "rbacPolicies": [
+    {
+      "resource": "Order",
+      "action": "approveOrder",
+      "allowedRoles": ["Manager"],
+      "separationOfDuties": true 
+    }
+  ]
+}
