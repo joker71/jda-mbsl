@@ -1,0 +1,22 @@
+{
+  "roles": ["Agent", "Supervisor", "Admin"],
+
+  "policies": [
+    {
+      "role": "Agent",
+      "rules": [
+        { "resource": "Ticket", "action": "createTicket", "effect": "allow" },
+        { "resource": "Ticket", "action": "resolveTicket", "effect": "deny", "reason": "Only supervisor can resolve directly" }
+      ]
+    },
+    {
+      "role": "Supervisor",
+      "rules": [
+        { "resource": "Ticket", "action": "approveTicket", "effect": "allow", "constraints": ["SoD"] }
+      ]
+    }
+  ],
+  "constraintsDefinition": {
+    "SoD": "resource.creatorId !== user.id" 
+  }
+}
